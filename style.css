@@ -1,0 +1,120 @@
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  overflow: hidden;
+  font-family: Arial, sans-serif;
+  background: #87ceeb;
+}
+
+canvas {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+button {
+  border: 0;
+  border-radius: 12px;
+  padding: 12px 20px;
+  margin: 5px;
+  background: #7357e8;
+  color: white;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+button:hover {
+  filter: brightness(1.12);
+}
+
+button:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+
+.screen {
+  position: fixed;
+  inset: 0;
+  z-index: 10;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  text-align: center;
+  color: white;
+  background: linear-gradient(135deg, #4834a4, #a66ee8, #f0a6ca);
+}
+
+.screen[hidden],
+#hud[hidden] {
+  display: none;
+}
+
+h1 {
+  font-size: clamp(32px, 6vw, 58px);
+  text-shadow: 3px 4px 0 #49358d;
+}
+
+.characters {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+}
+
+.characters button {
+  background: white;
+  color: #4834a4;
+}
+
+#startButton {
+  min-width: 180px;
+  background: #20a568;
+}
+
+.help {
+  font-size: 14px;
+}
+
+#hud {
+  position: fixed;
+  z-index: 5;
+  top: 12px;
+  left: 12px;
+  right: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  pointer-events: none;
+}
+
+#hud span {
+  padding: 10px 14px;
+  border-radius: 10px;
+  background: white;
+  color: #222;
+  font-weight: bold;
+}
+
+#hud button {
+  pointer-events: auto;
+  margin: 0;
+  padding: 10px;
+}
+
+#win {
+  background: linear-gradient(135deg, #159b73, #8bdc9b);
+}
+
+@media (max-width: 520px) {
+  #message {
+    display: none;
+  }
+}

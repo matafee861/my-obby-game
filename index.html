@@ -1,0 +1,41 @@
+
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Obby Game</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div id="menu" class="screen">
+    <h1>MY OBBY GAME</h1>
+    <p>เลือกตัวละครของคุณ</p>
+
+    <div class="characters">
+      <button onclick="chooseCharacter('blue')">🔵 ตัวละคร A</button>
+      <button onclick="chooseCharacter('pink')">🩷 ตัวละคร B</button>
+    </div>
+
+    <p id="selected">กรุณาเลือกตัวละคร</p>
+    <button id="startButton" onclick="startGame()" disabled>
+      START GAME
+    </button>
+    <p class="help">WASD หรือปุ่มลูกศร = เดิน | SPACE = กระโดด</p>
+  </div>
+
+  <div id="hud" hidden>
+    <span id="stage">ด่าน 1 / 3</span>
+    <span id="message">กระโดดไปให้ถึงเส้นชัย!</span>
+    <button onclick="location.reload()">กลับเมนู</button>
+  </div>
+
+  <div id="win" class="screen" hidden>
+    <h1>YOU WIN!</h1>
+    <p>ยินดีด้วย! คุณผ่านครบทั้ง 3 ด่านแล้ว 🎉</p>
+    <button onclick="location.reload()">เล่นอีกครั้ง</button>
+  </div>
+
+  <script type="module" src="game.js"></script>
+</body>
+</html>
